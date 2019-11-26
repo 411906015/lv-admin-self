@@ -4,36 +4,15 @@ namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\movies;
-use Encore\Admin\Controllers\Dashboard;
-use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
-use Encore\Admin\Layout\Row;
-
 use Encore\Admin\Grid;
 
 
-class HomeController extends Controller
+class TestController extends Controller
 {
-    public function index(Content $content)
-    {
-        return $content
-            ->title('Dashboard')
-            ->description('Description...')
-            ->row(Dashboard::title())
-            ->row(function (Row $row) {
 
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::environment());
-                });
+    public function sql(Content $content){
 
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::extensions());
-                });
-
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::dependencies());
-                });
-            });
     }
 
     public function test(Content $content){
