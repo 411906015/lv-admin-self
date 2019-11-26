@@ -30,7 +30,7 @@ class TestController extends Controller
 
 // 第三列显示director字段，通过display($callback)方法设置这一列的显示内容为users表中对应的用户名
 //        $grid->column('director')->display(function($userId) {
-//            return User::find($userId)->name;
+//            return movies::find(1)->title;
 //        });
 
 // 第四列显示为describe字段
@@ -39,10 +39,26 @@ class TestController extends Controller
 // 第五列显示为rate字段
         $grid->column('rate');
 
+        //单个关联
+//        $grid->column('movieHasPerson.name','personName');
+
+        //多个关联
+        $grid->column('hasManyPerson','many')->display(function ($hasManyPerson){
+            $count = count($hasManyPerson);
+            return "<span class='label label-warning'>$count</span>";
+        });
+
+
+
 // 第六列显示released字段，通过display($callback)方法来格式化显示输出
         $grid->column('released', '正在上映')->display(function ($released) {
             return $released ? '是' : '否';
         });
+
+//        $grid->column('name')->display(function ($name) {
+//            return "<span class='label'>$name</span>";
+//        });
+
 
 // 下面为三个时间字段的列显示
         $grid->column('release_at');
@@ -56,11 +72,12 @@ class TestController extends Controller
             $filter->between('created_at', 'Created Time')->datetime();
         });
 
-        $grid->paginate(1);
+//        $grid->paginate(1);
 
-
-
-
+        $grid->disableExport();
+//        $grid->disableRowSelector();
+//        $grid->disableColumnSelector();
+//        $grid->perPages([ ]);
         return $content->body($grid);
     }
 }

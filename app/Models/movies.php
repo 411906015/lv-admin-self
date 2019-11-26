@@ -29,6 +29,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\movies whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\movies whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\person $movieHasPerson
  */
 class movies extends Model
 {
@@ -38,4 +39,11 @@ class movies extends Model
     //不需要时间戳
     public $timestamps = false;
 
+    public function movieHasPerson(){
+        return $this->hasOne('App\Models\person','movies_id');
+    }
+
+    public function hasManyPerson(){
+        return $this->hasMany('App\Models\person','movies_id');
+    }
 }

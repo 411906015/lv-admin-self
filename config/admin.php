@@ -22,7 +22,8 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Laravel</b> admin',
+//    'logo' => '<b>Laravel</b> admin',
+    'logo' => '<b>LS</b> 管理系统',
 
     /*
     |--------------------------------------------------------------------------
