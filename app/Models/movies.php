@@ -30,6 +30,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\movies whereUpdatedAt($value)
  * @mixin \Eloquent
  * @property-read \App\Models\person $movieHasPerson
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\person[] $hasManyPerson
+ * @property-read int|null $has_many_person_count
  */
 class movies extends Model
 {

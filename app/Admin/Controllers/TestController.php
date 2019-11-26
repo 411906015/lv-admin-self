@@ -33,6 +33,10 @@ class TestController extends Controller
 //            return movies::find(1)->title;
 //        });
 
+        $grid->column('img')->display(function($userId) {
+            return '/images/kj.png';
+        })->image(env('APP_URL').'/upload/',50);
+
 // 第四列显示为describe字段
         $grid->column('describe');
 
@@ -64,12 +68,14 @@ class TestController extends Controller
         $grid->column('release_at');
         $grid->column('created_at','上映日期');
         $grid->column('updated_at');
-
+//        $grid->expandFilter();  //筛选项是否默认展示
 // filter($callback)方法用来设置表格的简单搜索框
         $grid->filter(function ($filter) {
-
+            $filter->disableIdFilter(); //是否显示ID查找
+            $filter->like('title', 'title');
+//            $filter->like('title', $_GET['title']);
             // 设置created_at字段的范围查询
-            $filter->between('created_at', 'Created Time')->datetime();
+//            $filter->between('created_at', 'Created Time')->datetime();
         });
 
 //        $grid->paginate(1);
