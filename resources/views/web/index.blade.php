@@ -121,10 +121,6 @@
             </div>
 
             <div class="font_line"><img src="/index_file/img/font_line.png" alt=""></div>
-            {{--<p>--}}
-                {{--<a href="###" class="am-btn am-btn-sm get-btn  am-radius banner_ios am-icon-apple"> App store</a> <a--}}
-                    {{--href="###" class="am-btn am-btn-sm  am-radius get-btn banner_android am-icon-android"> Android</a>--}}
-            {{--</p>--}}
         </div>
     </div>
 </div>
@@ -168,7 +164,6 @@
             </ul>
         </div>
 
-
         <div class="am_footer_don">
             <span>宠物秀</span>
             <dl>
@@ -183,20 +178,9 @@
             </dl>
         </div>
 
-        {{--<div class="am_footer_erweima">--}}
-            {{--<div class="am_footer_weixin"><img src="/index_file/img/wx.jpg" alt="">--}}
 
-                {{--<div class="am_footer_d_gzwx am-icon-weixin"> 关注微信</div>--}}
-            {{--</div>--}}
-            {{--<div class="am_footer_ddon"><img src="/index_file/img/wx.jpg" alt="">--}}
-
-                {{--<div class="am_footer_d_dxz am-icon-cloud-download"> 扫码下载</div>--}}
-            {{--</div>--}}
-
-        {{--</div>--}}
 
     </div>
-    {{--<div class="am_info_line">Copyright(c)2015 <span>PetShow</span> All Rights Reserved.模板收集自 <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> -  More Templates  <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></div>--}}
 </footer>
 <script src="/index_file/js/petshow.js"></script>
 </body>

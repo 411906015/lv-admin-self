@@ -19,7 +19,7 @@ Route::group([ 'namespace' => 'Web'], function ($router) {
     Route::any('/', 'IndexController@index');
 
 
-
+    Route::any('/old_index', 'IndexController@oldIndex');
 
 });
 

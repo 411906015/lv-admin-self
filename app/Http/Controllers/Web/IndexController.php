@@ -15,4 +15,12 @@ class IndexController extends Controller {
 
     }
 
+
+    public function oldIndex(){
+
+
+        return view('web.oldindex');
+
+    }
+
 }
