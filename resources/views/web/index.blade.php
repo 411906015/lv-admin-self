@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <title>index</title>
@@ -13,8 +13,6 @@
     <script src="/index_file/js/amazeui.min.js"></script>
     <script src="/index_file/js/countUp.min.js"></script>
     <script src="/index_file/js/amazeui.lazyload.min.js"></script>
-
-
 </head>
 <body>
 <header class="am-topbar am-topbar-inverse">
@@ -119,7 +117,6 @@
                 <div class="get_font_center" id="banner_num"></div>
                 <div class="get_font_rigth"><img src="/index_file/img/font_zty.png" alt=""></div>
             </div>
-
             <div class="font_line"><img src="/index_file/img/font_line.png" alt=""></div>
         </div>
     </div>
@@ -133,22 +130,25 @@
 </div>
 
 <div class="am-g am-imglist">
-    <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
-  am-avg-md-3 am-avg-lg-6 am-gallery-default">
+    <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2 am-avg-md-3 am-avg-lg-6 am-gallery-default">
         <li>
             <div class="am-gallery-item am_list_block">
                 <a href="###" class="am_img_bg">
-                    <img class="am_img animated" src="/index_file/img/loading.gif"
+                    <img class="am_img" src="/index_file/img/loading.gif"
                          data-original="http://img.petshow.cc/pet_show/2015_08/6d3c22171da582f569702bad45d9a4c6.jpg"
-                         alt="远方 有一个地方 那里种有我们的梦想"/>
+                         alt=""/>
                 </a>
 
-                <div class="am_listimg_info"><span class="am-icon-heart"> 132</span><span
-                        class="am-icon-comments"> 67</span><span class="am_imglist_time">15分钟前</span></div>
-
+                <div class="am_listimg_info">
+                    <span class="am-icon-heart"> 132</span>
+                    <span class="am-icon-comments"> 67</span>
+                    <span class="am_imglist_time">15分钟前</span>
+                </div>
             </div>
-            <a class="am_imglist_user"><span class="am_imglist_user_ico"><img src="/index_file/img/tx.jpg" alt=""></span><span
-                    class="am_imglist_user_font">路见不平Eason吼</span></a>
+            <a class="am_imglist_user">
+                <span class="am_imglist_user_ico"><img src="/index_file/img/tx.jpg" alt=""></span>
+                <span class="am_imglist_user_font">路见不平Eason吼</span>
+            </a>
         </li>
 
     </ul>
