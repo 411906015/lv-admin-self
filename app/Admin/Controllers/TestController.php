@@ -4,6 +4,7 @@ namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\movies;
+use Encore\Admin\Form;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Grid;
 
@@ -85,5 +86,18 @@ class TestController extends Controller
 //        $grid->disableColumnSelector();
 //        $grid->perPages([ ]);
         return $content->body($grid);
+    }
+
+
+    public function formTest(Content $content){
+//echo phpinfo();die;
+        $form = new Form(new movies);
+        // 显示记录id
+        $form->display('id', 'ID');
+
+// 添加text类型的input框
+        $form->text('title', '电影标题');
+
+        return $content->body($form);
     }
 }

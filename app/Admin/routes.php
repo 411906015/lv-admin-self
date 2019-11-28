@@ -13,5 +13,5 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('admin.home');
     $router->get('/test', 'TestController@test');
 
-    $router->get('/sql', 'TestController@sql');
+    $router->get('/from-test', 'TestController@formTest');
 });

@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
-Route::get('/test', function () {
-    echo 'test API';
+Route::group([ 'namespace' => 'Web'], function ($router) {
+
+
+    Route::any('/', 'IndexController@index');
+
+
+
+
 });
+
