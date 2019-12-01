@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class WebBaseController extends Controller {
 
-    public function __construct(){
+    public function __construct(Request $request){
 //        echo 123;
     }
 
