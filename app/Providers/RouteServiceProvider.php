@@ -39,7 +39,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        //
+        //electron-vue-admin 项目专用路由
+        $this->mapElectronApiRoutes();
     }
 
     /**
@@ -69,5 +70,12 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('api')
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
+    }
+
+    protected function mapElectronApiRoutes()
+    {
+        Route::middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/electronApi.php'));
     }
 }
