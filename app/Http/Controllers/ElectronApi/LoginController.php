@@ -10,10 +10,9 @@ class LoginController extends Controller {
 
     public function login(Request $request){
 
-        header('Content-Type:Access-Control-Allow-Origin');
         $asd = [
-          'code'=>1,
-          'data'=>['token'=>123456]
+          'code'=>20000,
+          'data'=>['token'=>3]
         ];
 
         return $asd;
