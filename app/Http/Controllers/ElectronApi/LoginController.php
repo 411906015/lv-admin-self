@@ -10,12 +10,20 @@ class LoginController extends Controller {
 
     public function login(Request $request){
 
-        $asd = [
-          'code'=>20000,
-          'data'=>['token'=>3]
-        ];
+        dd($request->all());
 
-        return $asd;
+
+    }
+
+    public function checkLogin(Request $request){
+
+        return response()->json([
+            'code'=>20000,
+            'data'=>[
+                'data1'=>1,
+                'data2'=>2,
+            ]
+        ]);
 
 
     }

@@ -25,9 +25,8 @@ Route::group([ 'namespace' => 'ElectronApi','prefix'=>'electronApi'], function (
 //    header("Access-Control-Allow-Origin: *");
 //    header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
-    Route::any('/user/login', 'LoginController@login');
-    Route::any('/user/info', 'LoginController@login');
-
+    //用户是否登录
+    Route::any('/user/checkLogin', 'LoginController@checkLogin');
     //获得我的项目列表
     Route::any('/myProject/list', 'ProjectController@getMyProjectList');
 });
