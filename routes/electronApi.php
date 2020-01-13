@@ -27,6 +27,12 @@ Route::group([ 'namespace' => 'ElectronApi','prefix'=>'electronApi'], function (
 
     //用户是否登录
     Route::any('/user/checkLogin', 'LoginController@checkLogin');
+    //用户登录
+    Route::any('/user/login', 'LoginController@login');
+
+
+
+
     //获得我的项目列表
     Route::any('/myProject/list', 'ProjectController@getMyProjectList');
 });
