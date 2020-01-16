@@ -51,7 +51,7 @@ class LoginController extends Controller {
         $userInfo = getRedisUserInfo($elenote_id);
 
         if (empty($userInfo)){
-            return resultErrorApi();
+            return resultErrorApi('登录信息错误');
         }
         return resultSuccessApi($userInfo);
     }

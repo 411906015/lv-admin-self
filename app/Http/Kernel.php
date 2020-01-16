@@ -57,5 +57,12 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+
+
+        /****** myself route  START******/
+
+        'CheckElenoteId' => \App\Http\Middleware\CheckElenoteId::class,
+
+        /****** myself route  END******/
     ];
 }
