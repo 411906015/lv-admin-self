@@ -56,6 +56,7 @@ if (! function_exists('setRedisUserInfoByUid')) {
     function setRedisUserInfoByUid($md5,$userInfo) {
         // ...
         $userPre = 'ELE_NOTE_'.$md5;
+        $userInfo['cacheKey'] = $md5;
         return \Illuminate\Support\Facades\Redis::connection('user')->setex($userPre,86400*7,json_encode($userInfo,JSON_UNESCAPED_UNICODE));
     }
 }
@@ -68,3 +69,10 @@ if (! function_exists('createUserMd5ByUid')) {
     }
 }
 
+//创建 系统密码
+if (! function_exists('createElenotePassword')) {
+    function createElenotePassword($str) {
+        // ...
+        return md5('elenote'.$str);
+    }
+}

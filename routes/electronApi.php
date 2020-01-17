@@ -17,9 +17,8 @@ Route::group([ 'namespace' => 'ElectronApi','prefix'=>'electronApi'], function (
     Route::any('/user/checkLogin', 'LoginController@checkLogin');
     //用户登录
     Route::any('/user/login', 'LoginController@login');
-
-    //获得我的项目列表
-    Route::any('/myProject/list', 'ProjectController@getMyProjectList');
+    //退出登录
+    Route::any('/user/exitLogin', 'LoginController@exitLogin');
 });
 
 
@@ -27,4 +26,9 @@ Route::group([ 'namespace' => 'ElectronApi','prefix'=>'electronApi','middleware'
 
     //修改密码
     Route::any('/user/edit-password', 'UserDataController@editPassWord');
+    //修改基本信息
+    Route::any('/user/edit-base', 'UserDataController@editBase');
+
+    //获得我的项目列表
+    Route::any('/project/list', 'ProjectController@getMyProjectList');
 });
